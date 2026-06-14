@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff8f3;
+    overflow-x:hidden;
+}
+
+/* Floating Hearts */
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:0;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    opacity:.7;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    100%{
+        transform:translateY(-100px);
+        opacity:1;
+    }
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url('IMG5.JPG');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.glass{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    padding:50px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.3);
+    max-width:700px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    color:white;
+    font-size:90px;
+}
+
+.hero p{
+    color:white;
+    font-size:20px;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:14px 35px;
+    border-radius:50px;
+    color:black;
+    font-weight:600;
+    background:linear-gradient(45deg,#d4af37,#ffd700);
+}
+
+/* Sections */
+
+section{
+    padding:100px 10%;
+    position:relative;
+    z-index:1;
+}
+
+.title{
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    color:#b76e79;
+    font-size:70px;
+    margin-bottom:50px;
+}
+
+/* Couple */
+
+.couple{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:340px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.card img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+    text-align:center;
+}
+
+/* Event */
+
+.event-box{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* Details */
+
+.details{
+    background:white;
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+}
+
+/* Countdown */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.box{
+    width:140px;
+    height:140px;
+    background:white;
+    border-radius:20px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.box span{
+    font-size:42px;
+    color:#d4af37;
+    font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+    height:100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url('IMG3.JPG');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+    color:white;
+}
+
+footer h2{
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+}
+
+footer p{
+    font-size:22px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .title{
+        font-size:45px;
+    }
+
+    footer h2{
+        font-size:55px;
+    }
+
+    .glass{
+        padding:30px;
+    }
+}
